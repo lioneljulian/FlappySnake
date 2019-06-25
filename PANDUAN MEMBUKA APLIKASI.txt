@@ -1,0 +1,4 @@
+Silahkan membuka file :
+	Home.html
+untuk memulai aplikasi
+melalui web browser firefox atau google chrome

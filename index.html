@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="jquery.min.js"></script>
+	
+	<style>
+		:root{
+			--lol: 100;
+		}
+	</style>
+	<script>
+		function ganti_color(){
+			var random = Math.random();
+			var ganti = document.querySelector(':root');
+			ganti.style.setProperty('--lol', random);
+		}
+	</script>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#body_wrapper
+		{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			margin: unset; 
+			background-image: linear-gradient(to bottom right,#ed6161,#9c55bd);
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -99;
+		}
+		.kepala{
+			background-image: url('resources/Head.png');
+			width: 5vw;
+			height: 5vw; 
+			background-size: 100% 100%;
+			display: inline-block;
+			margin-top: 45vh;
+			position: absolute;
+			margin-left: 75vw;		
+			transition: 0.5s ease;
+			/*filter: hue-rotate(calc(var(--lol)*360deg));*/
+		}
+		.badan{
+			background-image: url('resources/Body.png');
+			width: 5vw;
+			height: 5vw;
+			background-size: 100% 100%;
+			margin-top: 45vh;
+			position: absolute;	
+			/*filter: hue-rotate(calc(var(--lol)*360deg));*/
+		}
+		.satu{
+			margin-left: 25vw;
+			transition: 0.5s ease;
+		}
+		.dua{
+			margin-left: 30vw;
+			transition: 0.5s ease;
+		}
+		.tiga{
+			margin-left: 35vw;
+			transition: 0.5s ease;
+		}
+		.empat{
+			margin-left: 40vw;
+			transition: 0.5s ease;
+		}
+		.lima{
+			margin-left: 45vw;
+			transition: 0.5s ease;
+		}
+		.enam{
+			margin-left: 50vw;
+			transition: 0.5s ease;
+		}
+		.tujuh{
+			margin-left: 55vw;
+			transition: 0.5s ease;
+		}
+		.delapan{
+			margin-left: 60vw;
+			transition: 0.5s ease;
+		}
+		.sembilan{
+			margin-left: 65vw;
+			transition: 0.5s ease;
+		}
+		.sepuluh{
+			margin-left: 70vw;
+			transition: 0.5s ease;
+		}
+		button{
+			position: absolute;
+			width: 20vw;
+			height: 7vh;
+			font-size: 5vh;
+			font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+			background-color: #8FB339;
+			color: white;
+			margin-top: 65vh;
+			margin-left: 50%;
+			left: -10vw;
+			border: none;
+			border-radius: 20px;
+			transition: 0.5s ease;
+		}	
+		button:hover{
+			width: 22vw;
+			height: 9vh;
+			font-size: 6vh;
+			margin-left: 50%;
+			left: -11vw;
+			border-radius: 25px;
+
+		}	
+		#judul{
+			font-size: 15vh;
+			font-family: Copperplate,Copperplate Gothic Light,fantasy;
+			width: 70vw;
+			height: 20vh;
+			position: absolute;
+			margin-top: 10vh;
+			margin-left: 50%;
+			left: -32vw;
+			text-align: center;
+			color: #752D0E;
+		}
+		#pohon1{
+			background-image: url('Design/Obstacles/Ob1.png');
+			background-size: 100% 100%;
+			position: absolute;
+			height: 100vh;
+			width: 28vw;
+			z-index: -10;
+			/*filter: hue-rotate(200deg);*/
+
+		}
+		#jeda{
+			background-image: url('Design/Obstacles/Gap.png');
+			background-size: 100% 100%;
+			position: absolute;
+			height: 100vh;
+			width: 28vw;
+			z-index: -10;
+		}
+		#pohon2{
+			background-image: url('Design/Obstacles/Ob6.png');
+			background-size: 100% 100%;
+			position: absolute;
+			height: 100vh;
+			width: 28vw;
+			z-index: -10;
+		}
+	</style>
+	<!-- hover -->
+	<script>
+		$(document).ready(function(){
+			$(".satu").hover(function(){
+				$(".dua").css("margin-top", "42vh");
+				$(".satu").css("margin-top", "38vh");
+				}, function(){
+				$(".dua").css("margin-top", "45vh");
+				$(".satu").css("margin-top", "45vh");
+				});
+			$(".dua").hover(function(){
+				$(".satu, .tiga").css("margin-top", "42vh");
+				$(".dua").css("margin-top","38vh");
+				}, function(){
+				$(".satu, .tiga").css("margin-top", "45vh");
+				$(".dua").css("margin-top", "45vh");
+				});
+			$(".tiga").hover(function(){
+				$(".dua, .empat").css("margin-top", "42vh");
+				$(".tiga").css("margin-top","38vh");
+				}, function(){
+				$(".dua, .empat").css("margin-top", "45vh");
+				$(".tiga").css("margin-top", "45vh");
+				});
+			$(".empat").hover(function(){
+				$(".tiga, .lima").css("margin-top", "42vh");
+				$(".empat").css("margin-top","38vh");
+				}, function(){
+				$(".tiga, .lima").css("margin-top", "45vh");
+				$(".empat").css("margin-top", "45vh");
+				});
+			$(".lima").hover(function(){
+				$(".empat, .enam").css("margin-top", "42vh");
+				$(".lima").css("margin-top","38vh");
+				}, function(){
+				$(".empat, .enam").css("margin-top", "45vh");
+				$(".lima").css("margin-top", "45vh");
+				});
+			$(".enam").hover(function(){
+				$(".lima, .tujuh").css("margin-top", "42vh");
+				$(".enam").css("margin-top","38vh");
+				}, function(){
+				$(".lima, .tujuh").css("margin-top", "45vh");
+				$(".enam").css("margin-top", "45vh");
+				});
+			$(".tujuh").hover(function(){
+				$(".enam, .delapan").css("margin-top", "42vh");
+				$(".tujuh").css("margin-top","38vh");
+				}, function(){
+				$(".enam, .delapan").css("margin-top", "45vh");
+				$(".tujuh").css("margin-top", "45vh");
+				});
+			$(".delapan").hover(function(){
+				$(".tujuh, .sembilan").css("margin-top", "42vh");
+				$(".delapan").css("margin-top","38vh");
+				}, function(){
+				$(".tujuh, .sembilan").css("margin-top", "45vh");
+				$(".delapan").css("margin-top", "45vh");
+				});
+			$(".sembilan").hover(function(){
+				$(".delapan, .sepuluh").css("margin-top", "42vh");
+				$(".sembilan").css("margin-top","38vh");
+				}, function(){
+				$(".delapan, .sepuluh").css("margin-top", "45vh");
+				$(".sembilan").css("margin-top", "45vh");
+				});
+			$(".sepuluh").hover(function(){
+				$(".sembilan, .kepala").css("margin-top", "42vh");
+				$(".sepuluh").css("margin-top","38vh");
+				}, function(){
+				$(".sembilan, .kepala").css("margin-top", "45vh");
+				$(".sepuluh").css("margin-top", "45vh");
+				});
+			$(".kepala").hover(function(){
+				$(".sepuluh").css("margin-top", "42vh");
+				$(".kepala").css("margin-top","38vh");
+				}, function(){
+				$(".sepuluh").css("margin-top", "45vh");
+				$(".kepala").css("margin-top", "45vh");
+				});
+			});
+		/*$(document).ready(function(){
+			$(".dua").hover(function(){
+				$(".satu, .tiga").css({"background-color": "yellow", "color": "white"});
+				}, function(){
+				$("h1").css("background-color", "red");
+				});
+			});*/
+	</script>
+	<!-- keypress -->
+	<script>
+		$(window).keypress(function (){
+			$(".kepala").css("margin-top", "25vh");
+			setTimeout(function() {
+			$(".kepala").css("margin-top", "45vh");
+			}, 500);
+
+			setTimeout(function() {
+			$(".sepuluh").css("margin-top", "25vh");
+			}, 50);
+			setTimeout(function() {
+			$(".sepuluh").css("margin-top", "45vh");
+			}, 550);
+
+			setTimeout(function() {
+			$(".sembilan").css("margin-top", "25vh");
+			}, 100);
+			setTimeout(function() {
+			$(".sembilan").css("margin-top", "45vh");
+			}, 600);
+
+			setTimeout(function() {
+			$(".delapan").css("margin-top", "25vh");
+			}, 150);
+			setTimeout(function() {
+			$(".delapan").css("margin-top", "45vh");
+			}, 650);
+
+			setTimeout(function() {
+			$(".tujuh").css("margin-top", "25vh");
+			}, 200);
+			setTimeout(function() {
+			$(".tujuh").css("margin-top", "45vh");
+			}, 700);
+
+			setTimeout(function() {
+			$(".enam").css("margin-top", "25vh");
+			}, 250);
+			setTimeout(function() {
+			$(".enam").css("margin-top", "45vh");
+			}, 750);
+
+			setTimeout(function() {
+			$(".lima").css("margin-top", "25vh");
+			}, 300);
+			setTimeout(function() {
+			$(".lima").css("margin-top", "45vh");
+			}, 800);
+
+			setTimeout(function() {
+			$(".empat").css("margin-top", "25vh");
+			}, 350);
+			setTimeout(function() {
+			$(".empat").css("margin-top", "45vh");
+			}, 850);
+
+			setTimeout(function() {
+			$(".tiga").css("margin-top", "25vh");
+			}, 400);
+			setTimeout(function() {
+			$(".tiga").css("margin-top", "45vh");
+			}, 900);
+
+			setTimeout(function() {
+			$(".dua").css("margin-top", "25vh");
+			}, 450);
+			setTimeout(function() {
+			$(".dua").css("margin-top", "45vh");
+			}, 950);
+
+			setTimeout(function() {
+			$(".satu").css("margin-top", "25vh");
+			}, 500);
+			setTimeout(function() {
+			$(".satu").css("margin-top", "45vh");
+			}, 1000);
+		});
+	</script>
+	<script>
+		$(window).keyup(function () {
+			ganti_color();
+		});
+		$(window).keyup(function(){
+			setTimeout(function() {
+			$(".kepala").css("filter", "hue-rotate(calc(var(--lol)*360deg))");
+			$(".badan").css("filter", "hue-rotate(calc(var(--lol)*360deg))");
+			}, 500);
+		});
+	</script>
+</head>
+<body>
+	<div id="body_wrapper">
+		<div id="judul">
+			Flappy Snake
+		</div>
+		<div>
+		<div class="badan satu"></div>
+		<div class="badan dua"></div>
+		<div class="badan tiga"></div>
+		<div class="badan empat"></div>
+		<div class="badan lima"></div>
+		<div class="badan enam"></div>
+		<div class="badan tujuh"></div>
+		<div class="badan delapan"></div>
+		<div class="badan sembilan"></div>
+		<div class="badan sepuluh"></div>
+		<div class="kepala"></div>
+		</div>
+		<div>
+			<a href="flappy snake.html">
+				<button>
+					Play Game
+				</button>
+			</a>
+		</div>
+		<div id="pohon1"></div>
+		<div id="jeda" style="margin-left: 28vw"></div>
+		<div id="jeda" style="margin-left: 54vw"></div>
+		<div id="pohon2" style="margin-left: 72vw"></div>
+	</div>
+	</body>
+	
+</html>
