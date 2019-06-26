@@ -274,13 +274,13 @@ function accelerate(n) {
 
 
 $(window).keypress(function (){
-    myGamePiece.y = myGamePiece.y-30;
-    accelerate(-0.09);
+    myGamePiece.y = myGamePiece.y-40;
+    accelerate(-0.18);
 });
 $(window).keypress(function(){
     setTimeout(function() {
     // myGamePiece.y = myGamePiece.y+10
-    accelerate(0.03);
+    accelerate(0.08);
     }, 100);
     // myGamePiece.y = myGamePiece.y+10;
 });
